@@ -1,0 +1,14 @@
+[
+  {
+    "id": "example-message-1",
+    "channelId": "global",
+    "author": "Example User",
+    "authorId": "example-user-id",
+    "authorAvatar": "",
+    "text": "Example chat message.",
+    "timestamp": "2026-01-01T00:00:00.000Z",
+    "reactedBy": [],
+    "mentions": [],
+    "replyTo": null
+  }
+]

@@ -1,0 +1,286 @@
+/* src/App.css - Enhanced Main Content Styles */
+
+:root {
+  /* --header-height is used to offset page content for a fixed header.
+     It is updated at runtime (ResizeObserver) to match the real header height. */
+  --header-height: 72px;
+  /* --header-target-height is the design target size for the header itself. */
+  --header-target-height: 72px;
+  --page-gutter-x: 24px;
+  --page-gutter-y: 24px;
+  --page-shell-max: 1200px;
+  --page-shell-max-mobile: var(--phone-shell-max, 760px);
+  --safe-area-top: env(safe-area-inset-top, 0px);
+  --safe-area-right: env(safe-area-inset-right, 0px);
+  --safe-area-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-area-left: env(safe-area-inset-left, 0px);
+}
+
+/* Main Content Area */
+.main-content {
+  min-height: 100vh;
+  min-height: 100svh;
+  min-height: var(--app-viewport-height, 100svh);
+  background: var(--bg-secondary);
+  position: relative;
+  overflow-x: clip;
+}
+
+.main-content::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 52%;
+  height: var(--app-viewport-height, 100vh);
+  background:
+    radial-gradient(circle at top right, var(--accent-light) 0%, transparent 52%),
+    radial-gradient(circle at 12% 12%, color-mix(in srgb, var(--accent-color) 12%, transparent), transparent 56%);
+  opacity: 0.34;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Page Content */
+.page-content {
+  padding:
+    calc(var(--header-height) + var(--page-gutter-y))
+    calc(var(--page-gutter-x) + var(--safe-area-right))
+    calc(var(--page-gutter-y) + var(--safe-area-bottom))
+    calc(var(--page-gutter-x) + var(--safe-area-left));
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  min-height: 100svh;
+  min-height: var(--app-viewport-height, 100svh);
+  overflow-x: clip;
+  overflow-wrap: anywhere;
+  display: grid;
+  align-content: start;
+  gap: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Page Shell - Centered Container */
+.page-shell {
+  width: min(var(--page-shell-max), 100%);
+  margin: 0 auto;
+  padding: 0;
+  min-width: 0;
+}
+
+.route-loading {
+  display: grid;
+  place-items: center;
+  min-height: min(420px, calc(var(--app-viewport-height, 100svh) - var(--header-height)));
+}
+
+.route-loading-card {
+  width: min(520px, 100%);
+  padding: 28px;
+  border-radius: 28px;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-xl);
+  text-align: left;
+}
+
+.route-loading-card h1 {
+  margin: 0 0 10px;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+}
+
+.route-loading-card p {
+  margin: 0;
+}
+
+.route-loading-pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  margin-bottom: 12px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: var(--accent-light);
+  color: var(--accent-color);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Surface Card - Modern Card Design */
+.surface-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  padding: 24px;
+  box-shadow: var(--shadow-md);
+  transition: all 0.2s ease;
+}
+
+.surface-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+.surface-card h1 {
+  margin-bottom: 16px;
+  font-size: 1.75rem;
+}
+
+.surface-card h2 {
+  margin-bottom: 14px;
+  font-size: 1.5rem;
+}
+
+.surface-card h3 {
+  margin-bottom: 12px;
+  font-size: 1.25rem;
+}
+
+.surface-card p {
+  margin-bottom: 12px;
+  line-height: 1.7;
+}
+
+/* Grid Layout Utilities */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* Card Grid */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  :root {
+    --page-gutter-x: var(--phone-space-4, 16px);
+    --page-gutter-y: var(--phone-space-4, 16px);
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+
+  .main-content::before {
+    width: 100%;
+    opacity: 0.44;
+  }
+
+  .page-content {
+    padding:
+      calc(var(--header-height) + var(--page-gutter-y) + var(--safe-area-top) + 54px)
+      calc(var(--page-gutter-x) + var(--safe-area-right))
+      calc(var(--page-gutter-y) + var(--safe-area-bottom) + max(0px, var(--app-keyboard-inset) - 24px))
+      calc(var(--page-gutter-x) + var(--safe-area-left));
+  }
+
+  .page-shell {
+    width: min(var(--page-shell-max-mobile), 100%);
+    padding: 0;
+  }
+
+  .surface-card {
+    border-radius: var(--radius-lg);
+    padding: 20px;
+  }
+
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --page-gutter-x: var(--phone-space-3, 12px);
+    --page-gutter-y: var(--phone-space-3, 12px);
+  }
+
+  .page-content {
+    padding:
+      calc(var(--header-height) + var(--page-gutter-y) + var(--safe-area-top) + 52px)
+      calc(var(--page-gutter-x) + var(--safe-area-right))
+      calc(var(--page-gutter-y) + var(--safe-area-bottom) + max(0px, var(--app-keyboard-inset) - 32px))
+      calc(var(--page-gutter-x) + var(--safe-area-left));
+  }
+
+  .surface-card {
+    padding: 16px;
+    border-radius: var(--radius-md);
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .route-loading-card {
+    padding: 22px 18px;
+    border-radius: 22px;
+  }
+}
+
+/* Dark Theme */
+:root[data-theme="dark"] .main-content {
+  background: var(--bg-secondary);
+}
+
+:root[data-theme="dark"] .main-content::before {
+  background: radial-gradient(circle at top right, var(--accent-light) 0%, transparent 50%);
+  opacity: 0.15;
+}
+
+/* Animation Utilities */
+.fade-in {
+  animation: fadeIn 0.3s ease;
+}
+
+.slide-up {
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Staggered Animation Delays */
+.stagger-1 { animation-delay: 0.05s; }
+.stagger-2 { animation-delay: 0.1s; }
+.stagger-3 { animation-delay: 0.15s; }
+.stagger-4 { animation-delay: 0.2s; }
+.stagger-5 { animation-delay: 0.25s; }

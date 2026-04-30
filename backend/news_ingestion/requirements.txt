@@ -1,0 +1,4 @@
+beautifulsoup4==4.12.3
+argostranslate==1.10.0
+pymongo==4.12.1
+requests==2.32.3

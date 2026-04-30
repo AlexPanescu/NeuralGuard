@@ -1,0 +1,48 @@
+/* User location marker styles for MapLibre map */
+.user-location-marker {
+  width: 58px !important;
+  height: 34px !important;
+  background: rgba(37, 99, 235, 0.18) !important;
+  border: 2px solid rgba(37, 99, 235, 0.58) !important;
+  border-radius: 50% !important;
+  box-shadow:
+    0 0 0 8px rgba(59, 130, 246, 0.1),
+    0 10px 26px rgba(15, 23, 42, 0.18) !important;
+  cursor: pointer !important;
+  will-change: transform !important;
+  background-image: none !important;
+  position: relative !important;
+  display: block !important;
+  pointer-events: auto !important;
+}
+
+.user-location-marker::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 50% !important;
+  top: 50% !important;
+  width: 9px !important;
+  height: 9px !important;
+  transform: translate(-50%, -50%) !important;
+  border-radius: 50% !important;
+  background: #1d4ed8 !important;
+  border: 2px solid #ffffff !important;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.28) !important;
+}
+
+.user-location-marker::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 5px !important;
+  border-radius: 50% !important;
+  background: rgba(96, 165, 250, 0.16) !important;
+}
+
+.user-location-marker:hover {
+  transform: scale(1.06);
+}
+
+/* Ensure the MapLibre marker container doesn't interfere */
+.maplibregl-marker {
+  z-index: 1000 !important;
+}

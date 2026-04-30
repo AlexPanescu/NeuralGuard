@@ -1,0 +1,219 @@
+.tutorial-open {
+  overscroll-behavior: contain;
+}
+
+.tutorial-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2100;
+  pointer-events: none;
+}
+
+.tutorial-backdrop {
+  position: absolute;
+  inset: 0;
+  border: none;
+  background:
+    radial-gradient(circle at top right, rgba(249, 115, 22, 0.12), transparent 26%),
+    rgba(15, 23, 42, 0.58);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  pointer-events: none;
+}
+
+.tutorial-backdrop-segment {
+  inset: auto;
+}
+
+.tutorial-corner-blur {
+  inset: auto;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}
+
+.tutorial-highlight {
+  position: fixed;
+  border-radius: 20px;
+  border: 2px solid rgba(251, 146, 60, 0.92);
+  background: transparent;
+  box-shadow: 0 12px 40px rgba(15, 23, 42, 0.22);
+  pointer-events: none;
+  transition: top 120ms ease, left 120ms ease, width 120ms ease, height 120ms ease;
+}
+
+.tutorial-popover {
+  position: fixed;
+  z-index: 1;
+  border-radius: 24px;
+  border: 1px solid color-mix(in srgb, var(--border-color) 82%, #fb923c 18%);
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--bg-primary) 88%, #fff1df 12%), var(--bg-primary));
+  color: var(--text-primary);
+  box-shadow: 0 28px 70px rgba(15, 23, 42, 0.32);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 20px;
+  max-height: calc(var(--app-viewport-height, 100vh) - 24px);
+  max-width: calc(100vw - 24px);
+  overflow: auto;
+  pointer-events: auto;
+  transition: top 140ms ease, left 140ms ease;
+}
+
+.tutorial-popover-arrow {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: color-mix(in srgb, var(--bg-primary) 94%, #fff1df 6%);
+  border: 1px solid color-mix(in srgb, var(--border-color) 82%, #fb923c 18%);
+  transform: translateX(-50%) rotate(45deg);
+  pointer-events: none;
+}
+
+.tutorial-popover-arrow.top {
+  top: -8px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.tutorial-popover-arrow.bottom {
+  bottom: -8px;
+  border-left: none;
+  border-top: none;
+}
+
+.tutorial-popover-topline {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.tutorial-kicker {
+  margin: 0 0 6px;
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #ea580c;
+  font-weight: 800;
+}
+
+.tutorial-popover h2 {
+  margin: 0;
+  font-size: 1.18rem;
+  line-height: 1.25;
+}
+
+.tutorial-close {
+  border: 1px solid var(--border-color);
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  border-radius: 999px;
+  min-width: 44px;
+  width: 44px;
+  min-height: 44px;
+  height: 44px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.tutorial-copy {
+  margin: 14px 0 0;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.tutorial-progress {
+  margin-top: 16px;
+  color: var(--text-tertiary);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.tutorial-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.tutorial-primary,
+.tutorial-secondary {
+  min-width: 88px;
+  min-height: 44px;
+  border-radius: 999px;
+  padding: 10px 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.tutorial-primary {
+  border: none;
+  color: #fff;
+  background: linear-gradient(135deg, #ea580c, #fb923c);
+}
+
+.tutorial-secondary {
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  background: var(--bg-secondary);
+}
+
+.tutorial-primary:disabled,
+.tutorial-secondary:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+:root[data-theme="dark"] .tutorial-popover {
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--bg-primary) 92%, #3a240e 8%), var(--bg-primary));
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.44);
+}
+
+@media (max-width: 768px) {
+  .tutorial-highlight {
+    border-radius: 16px;
+    transition-duration: 100ms;
+  }
+
+  .tutorial-popover {
+    width: min(360px, calc(100vw - 24px));
+    max-width: calc(100vw - 24px);
+    max-height: min(calc(var(--app-viewport-height, 100vh) - 24px), 72vh);
+    padding: 18px 18px calc(18px + env(safe-area-inset-bottom, 0px));
+    border-radius: 20px;
+    box-shadow: 0 26px 60px rgba(2, 6, 23, 0.32);
+    transition-duration: 120ms;
+  }
+
+  .tutorial-actions {
+    flex-wrap: wrap;
+    justify-content: stretch;
+  }
+
+  .tutorial-primary,
+  .tutorial-secondary {
+    flex: 1 1 120px;
+  }
+}
+
+@media (max-width: 390px) {
+  .tutorial-actions {
+    flex-direction: column;
+  }
+
+  .tutorial-primary,
+  .tutorial-secondary {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tutorial-highlight,
+  .tutorial-popover {
+    transition: none;
+  }
+}

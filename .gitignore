@@ -1,0 +1,89 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Build output
+dist/
+**/dist/
+build/
+**/build/
+coverage/
+**/coverage/
+.vite/
+**/.vite/
+
+# Environment files
+.env
+.env.*
+!.env.example
+!.env.*.example
+!*.env.example
+
+# Logs
+logs/
+**/logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Runtime and temporary data
+tmp/
+temp/
+**/tmp/
+**/temp/
+*.tmp
+*.temp
+*.pid
+backend/tmp/
+backend/logs/
+backend/data/chat/*
+!backend/data/chat/*.example.json
+backend/data/users/*
+!backend/data/users/*.example.json
+
+# Test and browser artifacts
+test-results/
+**/test-results/
+playwright-report/
+**/playwright-report/
+blob-report/
+**/blob-report/
+
+# Cache
+.cache/
+**/.cache/
+.npm-cache/
+**/.npm-cache/
+.eslintcache
+*.tsbuildinfo
+
+# Python
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+**/.pytest_cache/
+.mypy_cache/
+**/.mypy_cache/
+.ruff_cache/
+**/.ruff_cache/
+.venv/
+venv/
+env/
+ENV/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.dotnet-cli-home/

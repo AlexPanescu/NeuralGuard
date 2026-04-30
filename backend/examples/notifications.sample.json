@@ -1,0 +1,46 @@
+[
+  {
+    "title": "Test sistem operativ",
+    "message": "Aceasta este o notificare de test din colectia notifications.",
+    "type": "system",
+    "link": "/notifications",
+    "source": "cluster-test",
+    "audience": "all",
+    "status": "active",
+    "isPinned": true,
+    "createdAt": "2026-04-14T09:15:00.000Z"
+  },
+  {
+    "title": "Incident nou in centru",
+    "message": "Un incident critic a fost inregistrat si necesita verificare imediata.",
+    "type": "incident_created",
+    "link": "/incidents",
+    "source": "incident-center",
+    "audience": "signed_in",
+    "status": "active",
+    "isPinned": false,
+    "createdAt": "2026-04-14T09:20:00.000Z"
+  },
+  {
+    "title": "Ghid operational actualizat",
+    "message": "Un ghid nou este disponibil pentru echipa de teren.",
+    "type": "guide",
+    "link": "/guide",
+    "source": "operations",
+    "audience": "all",
+    "status": "active",
+    "isPinned": false,
+    "createdAt": "2026-04-14T09:25:00.000Z"
+  },
+  {
+    "title": "Alerta SOS",
+    "message": "A fost creat un incident SOS critic si echipa trebuie notificata.",
+    "type": "sos",
+    "link": "/sos",
+    "source": "sos-center",
+    "audience": "signed_in",
+    "status": "active",
+    "isPinned": true,
+    "createdAt": "2026-04-14T09:30:00.000Z"
+  }
+]

@@ -1,0 +1,65 @@
+.modal-anim-backdrop {
+  animation: modal-fade-in 0.28s ease-out both;
+}
+
+.modal-anim-backdrop.is-exiting {
+  animation: modal-fade-out 0.28s ease-in both;
+}
+
+.modal-anim-panel {
+  animation: modal-pop-in 0.36s cubic-bezier(0.16, 1, 0.3, 1) both;
+  transform-origin: center;
+}
+
+.modal-anim-panel.is-exiting {
+  animation: modal-pop-out 0.32s ease-in both;
+}
+
+@keyframes modal-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modal-fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes modal-pop-in {
+  from {
+    opacity: 0;
+    transform: translateY(22px) scale(0.965);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes modal-pop-out {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(18px) scale(0.97);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .modal-anim-backdrop,
+  .modal-anim-backdrop.is-exiting,
+  .modal-anim-panel,
+  .modal-anim-panel.is-exiting {
+    animation: none !important;
+  }
+}

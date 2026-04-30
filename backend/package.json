@@ -1,0 +1,34 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "node tests/run-tests.js",
+    "test:js": "node tests/run-tests.js",
+    "start": "node src/server.js",
+    "incidents:sync:once": "python -m incident_ingestion.runner --once",
+    "incidents:sync:dry": "python -m incident_ingestion.runner --once --dry-run",
+    "incidents:sync:daemon": "python -m incident_ingestion.runner",
+    "news:sync:once": "python -m news_ingestion.runner --once",
+    "news:sync:dry": "python -m news_ingestion.runner --once --dry-run",
+    "news:sync:daemon": "python -m news_ingestion.runner",
+    "news:translations:backfill": "python -m news_ingestion.runner --backfill-translations",
+    "news:translations:backfill:dry": "python -m news_ingestion.runner --backfill-translations --dry-run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cloudinary": "^2.9.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "mongodb": "^7.0.0",
+    "mongoose": "^9.1.1",
+    "multer": "^2.0.2",
+    "playwright-core": "^1.59.1"
+  }
+}

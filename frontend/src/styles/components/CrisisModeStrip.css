@@ -1,0 +1,115 @@
+.crisis-mode-strip {
+  z-index: 1150;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: min(1720px, calc(100% - 24px));
+  min-height: 44px;
+  margin: 16px auto 24px;
+  padding: 8px 12px;
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--surface, #ffffff) 88%, transparent);
+  color: var(--text-primary, #0f172a);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+  backdrop-filter: blur(14px);
+}
+
+.crisis-strip-status,
+.crisis-strip-meta,
+.crisis-strip-links {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.crisis-dot {
+  width: 9px;
+  height: 9px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+}
+
+.crisis-dot.is-online {
+  background: #16a34a;
+  box-shadow: 0 0 0 4px rgba(22, 163, 74, 0.12);
+}
+
+.crisis-dot.is-offline {
+  background: #dc2626;
+  box-shadow: 0 0 0 4px rgba(220, 38, 38, 0.12);
+}
+
+.crisis-strip-muted,
+.crisis-strip-meta {
+  color: var(--text-muted, #64748b);
+  font-size: 0.82rem;
+}
+
+.crisis-strip-select select {
+  min-height: 34px;
+  border: 1px solid rgba(148, 163, 184, 0.38);
+  border-radius: 7px;
+  padding: 0 28px 0 10px;
+  background: var(--surface, #ffffff);
+  color: var(--text-primary, #0f172a);
+  font: inherit;
+}
+
+.crisis-strip-links a {
+  min-height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  border-radius: 7px;
+  background: rgba(37, 99, 235, 0.1);
+  color: #1d4ed8;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.crisis-strip-links .crisis-queued-link {
+  background: rgba(245, 158, 11, 0.14);
+  color: #92400e;
+}
+
+@media (max-width: 1024px) {
+  .crisis-mode-strip {
+    flex-wrap: wrap;
+    align-items: stretch;
+    padding: 10px;
+    padding-left: 64px;
+  }
+
+  .crisis-strip-status,
+  .crisis-strip-meta {
+    flex: 1 1 180px;
+  }
+
+  .crisis-strip-select,
+  .crisis-strip-select select {
+    flex: 1 1 132px;
+  }
+
+  .crisis-strip-links {
+    flex: 1 1 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(72px, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .crisis-mode-strip {
+    width: min(100% - 16px, 520px);
+    gap: 8px;
+  }
+
+  .crisis-strip-meta {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+}

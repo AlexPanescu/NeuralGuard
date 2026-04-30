@@ -1,0 +1,191 @@
+[
+  {
+    "category": "Cutremur",
+    "categoryKey": "cutremur",
+    "description": "Ghiduri rapide pentru actiuni sigure in timpul unui cutremur.",
+    "situations": [
+      {
+        "name": "Inainte de cutremur",
+        "situationKey": "cutremur-inainte-de-cutremur",
+        "subcategories": [
+          {
+            "subcategoryId": "cutremur-cutremur-inainte-de-cutremur-seizmometru",
+            "title": "Seizmometru",
+            "pdf": "/guide-pdfs/cutremur/inainte-de-cutremur/seizmometru.pdf",
+            "pdfByLanguage": {
+              "ro": "",
+              "en": "/guide-pdfs/cutremur/inainte-de-cutremur/seizmometru-en.pdf"
+            },
+            "updatedAt": "2026-04-29T17:32:18.777Z",
+            "owner": "",
+            "tags": [],
+            "audience": [],
+            "incidentTypes": [],
+            "offlineEligible": false
+          },
+          {
+            "subcategoryId": "cutremur-cutremur-inainte-de-cutremur-siguranta-locuintei",
+            "title": "Siguranta locuintei",
+            "pdf": "/guide-pdfs/cutremur/inainte-de-cutremur/siguranta-locuintei.pdf",
+            "pdfByLanguage": {
+              "ro": "/guide-pdfs/cutremur/inainte-de-cutremur/siguranta-locuintei.pdf",
+              "en": "/guide-pdfs/cutremur/inainte-de-cutremur/siguranta-locuintei-en.pdf"
+            },
+            "updatedAt": "2026-04-29T17:25:37.753Z",
+            "owner": "",
+            "tags": [],
+            "audience": [],
+            "incidentTypes": [],
+            "offlineEligible": false
+          },
+          {
+            "subcategoryId": "cutremur-cutremur-inainte-de-cutremur-kit-de-urgenta",
+            "title": "Kit de urgenta",
+            "pdf": "/guide-pdfs/cutremur/inainte-de-cutremur/kit-de-urgenta.pdf",
+            "pdfByLanguage": {
+              "ro": "/guide-pdfs/cutremur/inainte-de-cutremur/kit-de-urgenta.pdf",
+              "en": "/guide-pdfs/cutremur/inainte-de-cutremur/kit-de-urgenta-en.pdf"
+            },
+            "updatedAt": "2026-04-29T17:27:32.048Z",
+            "owner": "",
+            "tags": [],
+            "audience": [],
+            "incidentTypes": [],
+            "offlineEligible": false
+          },
+          {
+            "subcategoryId": "cutremur-cutremur-inainte-de-cutremur-ce-este-un-cutremur",
+            "title": "Ce este un cutremur?",
+            "pdf": "/guide-pdfs/cutremur/inainte-de-cutremur/ce-este-un-cutremur.pdf",
+            "pdfByLanguage": {
+              "ro": "/guide-pdfs/cutremur/inainte-de-cutremur/ce-este-un-cutremur.pdf",
+              "en": "/guide-pdfs/cutremur/inainte-de-cutremur/ce-este-un-cutremur-en.pdf"
+            },
+            "updatedAt": "2026-04-29T17:23:50.119Z",
+            "owner": "",
+            "tags": [],
+            "audience": [],
+            "incidentTypes": [],
+            "offlineEligible": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Incendiu",
+    "categoryKey": "incendiu",
+    "description": "Pasi esentiali pentru prevenire si actiune in caz de incendiu.",
+    "situations": [
+      {
+        "name": "Prevenire",
+        "situationKey": "incendiu-prevenire",
+        "subcategories": [
+          {
+            "subcategoryId": "incendiu-incendiu-prevenire-detectoare-si-extinctoare",
+            "title": "Detectoare si extinctoare",
+            "pdf": "/guide-pdfs/incendiu/prevenire/detectoare-si-extinctoare.pdf",
+            "pdfByLanguage": {
+              "ro": "",
+              "en": "/guide-pdfs/incendiu/prevenire/detectoare-si-extinctoare-en.pdf"
+            },
+            "updatedAt": "2026-04-29T17:32:21.987Z",
+            "owner": "",
+            "tags": [],
+            "audience": [],
+            "incidentTypes": [],
+            "offlineEligible": false
+          },
+          {
+            "subcategoryId": "incendiu-incendiu-prevenire-rute-de-evacuare",
+            "title": "Rute de evacuare",
+            "pdf": "/guide-pdfs/incendiu/prevenire/rute-de-evacuare.pdf",
+            "pdfByLanguage": {
+              "ro": "",
+              "en": "/guide-pdfs/incendiu/prevenire/rute-de-evacuare-en.pdf"
+            },
+            "updatedAt": "2026-04-29T17:32:29.246Z",
+            "owner": "",
+            "tags": [],
+            "audience": [],
+            "incidentTypes": [],
+            "offlineEligible": false
+          },
+          {
+            "subcategoryId": "incendiu-incendiu-prevenire-arsurile",
+            "title": "Arsurile",
+            "pdf": "/guide-pdfs/incendiu/prevenire/arsurile.pdf",
+            "pdfByLanguage": {
+              "ro": "/guide-pdfs/incendiu/prevenire/arsurile.pdf",
+              "en": "/guide-pdfs/incendiu/prevenire/arsurile-en.pdf"
+            },
+            "updatedAt": "2026-04-29T17:24:14.574Z",
+            "owner": "",
+            "tags": [],
+            "audience": [],
+            "incidentTypes": [],
+            "offlineEligible": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Prim ajutor",
+    "categoryKey": "prim-ajutor",
+    "description": "Situatii medicale frecvente si interventii rapide.",
+    "situations": [
+      {
+        "name": "Traumatisme",
+        "situationKey": "prim-ajutor-traumatisme",
+        "subcategories": [
+          {
+            "subcategoryId": "prim-ajutor-prim-ajutor-traumatisme-fracturi-si-entorse",
+            "title": "Fracturi si entorse",
+            "pdf": "/guide-pdfs/prim-ajutor/traumatisme/fracturi-si-entorse.pdf",
+            "pdfByLanguage": {
+              "ro": "/guide-pdfs/prim-ajutor/traumatisme/fracturi-si-entorse.pdf",
+              "en": "/guide-pdfs/prim-ajutor/traumatisme/fracturi-si-entorse-en.pdf"
+            },
+            "updatedAt": "2026-04-29T17:24:43.604Z",
+            "owner": "",
+            "tags": [],
+            "audience": [],
+            "incidentTypes": [],
+            "offlineEligible": false
+          },
+          {
+            "subcategoryId": "prim-ajutor-prim-ajutor-traumatisme-prim-ajutor",
+            "title": "Prim-ajutor",
+            "pdf": "/guide-pdfs/prim-ajutor/traumatisme/prim-ajutor.pdf",
+            "pdfByLanguage": {
+              "ro": "/guide-pdfs/prim-ajutor/traumatisme/prim-ajutor.pdf",
+              "en": "/guide-pdfs/prim-ajutor/traumatisme/prim-ajutor-en.pdf"
+            },
+            "updatedAt": "2026-04-29T17:29:24.880Z",
+            "owner": "",
+            "tags": [],
+            "audience": [],
+            "incidentTypes": [],
+            "offlineEligible": false
+          },
+          {
+            "subcategoryId": "prim-ajutor-prim-ajutor-traumatisme-resuscitarea-cardio-respiratorie-rcp",
+            "title": "Resuscitarea cardio-respiratorie (RCP)",
+            "pdf": "/guide-pdfs/prim-ajutor/traumatisme/resuscitarea-cardio-respiratorie-rcp.pdf",
+            "pdfByLanguage": {
+              "ro": "/guide-pdfs/prim-ajutor/traumatisme/resuscitarea-cardio-respiratorie-rcp.pdf",
+              "en": "/guide-pdfs/prim-ajutor/traumatisme/resuscitarea-cardio-respiratorie-rcp-en.pdf"
+            },
+            "updatedAt": "2026-04-29T17:28:22.843Z",
+            "owner": "",
+            "tags": [],
+            "audience": [],
+            "incidentTypes": [],
+            "offlineEligible": false
+          }
+        ]
+      }
+    ]
+  }
+]

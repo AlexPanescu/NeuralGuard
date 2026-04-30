@@ -1,0 +1,368 @@
+.operations-page,
+.incident-page,
+.notifications-page,
+.training-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.operations-hero,
+.ops-card,
+.incident-shell,
+.training-card,
+.notification-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.08);
+}
+
+.operations-hero,
+.incident-shell {
+  padding: 24px;
+}
+
+.operations-hero {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  background:
+    radial-gradient(circle at top right, rgba(249, 115, 22, 0.16), transparent 30%),
+    linear-gradient(135deg, rgba(15, 23, 42, 0.04), rgba(249, 115, 22, 0.08));
+}
+
+.operations-hero h1,
+.incident-shell h1,
+.notification-card h1,
+.training-card h1 {
+  margin: 0;
+}
+
+.operations-hero p,
+.incident-shell p {
+  margin: 8px 0 0;
+}
+
+.ops-kpis {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  min-width: 320px;
+}
+
+.ops-kpi {
+  padding: 14px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.ops-kpi strong {
+  display: block;
+  font-size: 1.3rem;
+}
+
+.ops-grid,
+.incident-grid,
+.training-grid {
+  display: grid;
+  grid-template-columns: minmax(320px, 1.2fr) minmax(280px, 0.8fr);
+  gap: 20px;
+}
+
+.ops-card,
+.incident-card,
+.notification-card,
+.training-card {
+  padding: 20px;
+}
+
+.ops-card h2,
+.incident-card h2,
+.notification-card h2,
+.training-card h2 {
+  margin: 0 0 12px;
+}
+
+.incident-list,
+.task-list,
+.notification-list,
+.drill-history {
+  display: grid;
+  gap: 12px;
+}
+
+.incident-item,
+.task-item,
+.notification-item,
+.drill-item {
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 16px;
+  padding: 14px;
+  background: rgba(15, 23, 42, 0.03);
+}
+
+.incident-item button,
+.task-item button,
+.notification-item a,
+.pill-btn,
+.ops-button,
+.inline-form button,
+.incident-actions button,
+.training-card button {
+  cursor: pointer;
+}
+
+.incident-link {
+  border: none;
+  background: transparent;
+  width: 100%;
+  text-align: left;
+  padding: 0;
+  color: inherit;
+}
+
+.incident-item-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.incident-topline,
+.task-topline,
+.notification-topline {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+}
+
+.pill-row,
+.training-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.pill,
+.pill-btn {
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 0.78rem;
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  background: rgba(248, 250, 252, 0.9);
+}
+
+.pill.severity-critical { color: #b91c1c; }
+.pill.severity-high { color: #c2410c; }
+.pill.status-active,
+.pill.status-open { color: #0f766e; }
+.pill.status-resolved,
+.pill.task-done { color: #166534; }
+.pill.pill-auto-closed {
+  color: #7c3aed;
+  border-color: rgba(124, 58, 237, 0.22);
+  background: rgba(124, 58, 237, 0.08);
+}
+
+.inline-form,
+.stack-form {
+  display: grid;
+  gap: 10px;
+}
+
+.inline-form input,
+.inline-form select,
+.inline-form textarea,
+.stack-form input,
+.stack-form select,
+.stack-form textarea {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.26);
+  padding: 11px 12px;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.inline-form textarea,
+.stack-form textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.split-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.ops-button,
+.inline-form button,
+.stack-form button,
+.incident-actions button,
+.training-card button {
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #ea580c, #f97316);
+  color: white;
+  padding: 11px 14px;
+  font-weight: 700;
+}
+
+.ops-primary-btn {
+  width: 100%;
+}
+
+.ops-danger-btn {
+  border: 1px solid rgba(220, 38, 38, 0.25);
+  background: rgba(220, 38, 38, 0.08);
+  color: #b91c1c;
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-weight: 700;
+}
+
+.ops-primary-btn[disabled] {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.ops-feedback {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.ops-feedback.is-success {
+  color: #166534;
+}
+
+.ops-feedback.is-error {
+  color: #b91c1c;
+}
+
+.incident-meta,
+.muted-line,
+.training-meta {
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+}
+.incident-meta-accent {
+  color: #6d28d9;
+  font-weight: 600;
+}
+
+.incident-timeline {
+  display: grid;
+  gap: 10px;
+}
+
+.timeline-item {
+  padding-left: 14px;
+  border-left: 2px solid rgba(249, 115, 22, 0.35);
+}
+
+.incident-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.guide-assignment-list {
+  display: grid;
+  gap: 10px;
+}
+
+.guide-assignment-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 14px;
+  background: rgba(15, 23, 42, 0.03);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+}
+
+@media (max-width: 1024px) {
+  .operations-page,
+  .incident-page,
+  .notifications-page,
+  .training-page {
+    gap: var(--phone-section-gap);
+  }
+
+  .operations-hero,
+  .ops-card,
+  .incident-shell,
+  .incident-card,
+  .notification-card,
+  .training-card {
+    border-radius: var(--phone-radius-lg);
+  }
+}
+
+@media (max-width: 980px) {
+  .ops-grid,
+  .incident-grid,
+  .training-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .operations-hero {
+    flex-direction: column;
+  }
+
+  .ops-kpis {
+    min-width: 0;
+    grid-template-columns: 1fr;
+  }
+
+  .split-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .operations-page,
+  .incident-page,
+  .notifications-page,
+  .training-page {
+    gap: 16px;
+  }
+
+  .operations-hero,
+  .incident-shell,
+  .ops-card,
+  .incident-card,
+  .notification-card,
+  .training-card {
+    padding: 16px;
+    border-radius: 16px;
+  }
+
+  .ops-kpi {
+    padding: 12px;
+  }
+
+  .incident-topline,
+  .task-topline,
+  .notification-topline {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .incident-item-actions {
+    justify-content: stretch;
+  }
+
+  .incident-item-actions > * {
+    width: 100%;
+  }
+
+  .guide-assignment-item {
+    flex-direction: column;
+  }
+}
